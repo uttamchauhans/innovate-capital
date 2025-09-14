@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=../.env --watch src/index.js",
-    "start": "node --env-file=../.env src/index.js",
-    "seed": "node prisma/seed.js",
-    "prisma": "prisma"
-  },
+  "dev": "node --env-file=../.env --watch src/index.js",
+  "start": "node --env-file=../.env src/index.js",
+  "seed": "node prisma/seed.js",
+  "migrate": "npx prisma migrate deploy"
+},
   "dependencies": {
     "@prisma/client": "^5.19.1",
     "cors": "^2.8.5",
