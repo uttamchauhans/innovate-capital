@@ -4,9 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "node --env-file=../.env --watch src/index.js",
-    "start": "node src/index.js",
+    "start": "node --env-file=../.env src/index.js",
     "seed": "node prisma/seed.js",
-    "migrate": "prisma migrate deploy"
+    "migrate": "npx prisma migrate deploy"   
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
@@ -17,7 +17,9 @@
     "jsonwebtoken": "^9.0.2",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.13",
-    "zod": "^3.23.8",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
     "prisma": "^5.22.0"
   }
 }
